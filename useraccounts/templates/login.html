@@ -7,7 +7,7 @@
     <title>Bug Tracker</title>
 </head>
 <body>
-    <h1>Homepage</h1>
+    <h1>User Area</h1>
     <nav>
         <ul>
             <li><a href="{% url 'login' %}">Login</a></li>
@@ -25,5 +25,8 @@
     </div>
     {% endif %}
 
+    <form method="POST">
+        {{ login_form }}
+    </form>
 </body>
 </html>
