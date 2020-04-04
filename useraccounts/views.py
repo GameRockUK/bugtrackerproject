@@ -43,6 +43,7 @@ def registration(request):
     """Render the registration page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
+        
     if request.method == "POST":
         registration_form = UserRegistrationForm(request.POST)
 
@@ -58,8 +59,8 @@ def registration(request):
             else:
                 messages.error(
                     request, "Unable to register, please check form")
-
-    registration_form = UserRegistrationForm()
+    else:
+        registration_form = UserRegistrationForm()
     return render(request, 'registration.html', {
         "registration_form": registration_form})
 
