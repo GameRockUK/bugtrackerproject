@@ -8,23 +8,15 @@
     <title>{% block page_title %}{% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'index' %}">Bug Tracker</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <ul class="nav navbar-nav form-inline">
             {% if user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'profile' %}">Profile</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-            </li>
+            <li><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+            <li><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
             {% else %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'registration' %}">Register</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'registration' %}">Register</a></li>
             {% endif %}
         </ul>
     </nav>

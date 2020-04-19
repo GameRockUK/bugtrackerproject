@@ -44,7 +44,7 @@ def registration(request):
     """Render the registration page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
-        
+
     if request.method == "POST":
         registration_form = UserRegistrationForm(request.POST)
 

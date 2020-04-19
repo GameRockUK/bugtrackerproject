@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 
+
 class EmailAuth:
     """Authenticate a user by an email"""
 
@@ -14,7 +15,7 @@ class EmailAuth:
             return None
         except User.DoesNotExist:
             return None
-    
+
     def get_user(self, user_id):
         """Django authentication system uses this to retrieve the user instance"""
         try:
