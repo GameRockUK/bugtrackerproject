@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block page_title %}Home Page{% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
 </div>
 <div class="row">
     <div class="card col-sm" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{% static 'images/coolphoto.jpg' %}" class="card-img-top" alt="mousephoto" id="cardphotoone">
         <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>

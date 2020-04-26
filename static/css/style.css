@@ -1,0 +1,11 @@
+/* FORM STYLING FOR LOGIN / REGISTRATION */
+
+form {
+    width: 20%;
+}
+
+/* NAVBAR / LINK FORMATTING */
+
+a:hover {
+    text-decoration: none;
+}
