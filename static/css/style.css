@@ -6,6 +6,24 @@ form {
 
 /* NAVBAR / LINK FORMATTING */
 
-a:hover {
+nav-item a {
     text-decoration: none;
+}
+
+/* CARD FORMATTING FOR INDEX */
+
+.card {
+    border: none;
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER FORMATTING */
+
+#cp {
+    text-align: center;
+    padding-top: 5%;
 }
