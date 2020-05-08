@@ -1,13 +1,23 @@
 /* FORM STYLING FOR LOGIN / REGISTRATION */
 
 form {
-    width: 20%;
+    width: 40%;
+}
+
+h2 {
+    align-content: center;
 }
 
 /* NAVBAR / LINK FORMATTING */
 
-nav-item a {
+a {
     text-decoration: none;
+}
+/* JUMBOTRON STYLING */
+
+.jumbotron {
+    background-color: #083e73;
+    color: white;
 }
 
 /* CARD FORMATTING FOR INDEX */
@@ -27,3 +37,11 @@ nav-item a {
     text-align: center;
     padding-top: 5%;
 }
+
+/* RESPONSIVE STYLING */
+
+@media (max-width: @screen-sm) { 
+    .form {
+        width: 100%;
+    }
+ }
