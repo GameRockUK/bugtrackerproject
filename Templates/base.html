@@ -1,5 +1,6 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,7 @@
         <ul class="nav navbar-nav">
             {% if user.is_authenticated %}
             <li class="nav-link">
-                <a class="nav-item" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-item" href="{% url 'products' %}">Store</a>
             </li>
             <li class="nav-link">
                 <a class="nav-item" href="{% url 'logout' %}">Logout</a>

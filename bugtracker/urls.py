@@ -18,7 +18,6 @@ from django.contrib import admin
 from useraccounts.views import index
 from useraccounts import urls as useraccounts_urls
 from products import urls as urls_products
-from products.views import all_products
 from cart import urls as urls_cart
 from django.views import static
 from .settings import MEDIA_ROOT

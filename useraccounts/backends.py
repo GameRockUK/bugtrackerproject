@@ -5,7 +5,9 @@ class EmailAuth:
     """Authenticate a user by an email"""
 
     def authenticate(self, username=None, password=None):
-        """Get instance of user which is based off the email and verification of the password"""
+        """Get instance of user which is based off the email 
+        and verification of the password
+        """
 
         try:
             user = User.objects.get(email=username)
