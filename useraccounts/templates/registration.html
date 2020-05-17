@@ -8,16 +8,12 @@
 {% block page_heading %}<h2>User Registration</h2>{% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <form method="POST">
+        <div>
+            <form method="POST" class="col-sm-12 col-lg-6">
                 {% csrf_token %}
                 {{ registration_form | as_bootstrap }}
                 <button type="submit">Register</button> 
             </form>
             <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
         </div>
-    </div>
-</div> 
 {% endblock %}
