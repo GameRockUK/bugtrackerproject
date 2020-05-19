@@ -67,6 +67,7 @@ a:link{
 .panel-default {
     border-color: transparent;
     padding: 0 10px;
+    margin-left: 5%;
 }
 
 .panel-body {
