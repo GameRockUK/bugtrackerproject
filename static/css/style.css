@@ -72,7 +72,7 @@ a:link{
 
 .panel-body {
     height: 100%;
-    border: 1px solid #ddd;
+    border: none;
 }
 
 .product-description {

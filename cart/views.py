@@ -10,7 +10,7 @@ def view_cart(request):
 
 def add_to_cart(request, id):
     """Add a multiple items to the cart"""
-    quantity=int(request.POST.get('quantity'))
+    quantity =int(request.POST.get('quantity'))
 
     cart = request.session.get('cart', {})
     if id in cart:

@@ -19,7 +19,10 @@ class EmailAuth:
             return None
 
     def get_user(self, user_id):
-        """Django authentication system uses this to retrieve the user instance"""
+        """
+        Django authentication system uses this 
+        to retrieve the user instance
+        """
         try:
             user = User.objects.get(pk=user_id)
 

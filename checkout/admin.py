@@ -3,6 +3,7 @@ from .models import Order, OrderLineItem
 
 # Register your models here.
 
+
 class OrderLineAdminInline(admin.TabularInline):
     model = OrderLineItem
 
