@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
+from useraccounts.models import contactform
 
 
 class UserLoginForm(forms.Form):
@@ -45,3 +46,8 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError("Passwords must match")
 
         return password2
+
+class contactusform(forms.ModelForm):
+    class Meta:
+        model = contactform
+        fields = ['full_name', 'phone_number', 'country', 'requiredby', 'description']

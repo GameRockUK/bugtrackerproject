@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from useraccounts.forms import UserLoginForm, UserRegistrationForm
+from useraccounts.models import contactform
+from useraccounts.forms import UserLoginForm, UserRegistrationForm, contactusform
 
 
 def index(request):
@@ -56,7 +57,7 @@ def registration(request):
             if user:
                 auth.login(user=user, request=request)
                 messages.success(
-                    request, "You have successfully signed up to Bug Tracker")
+                    request, "You have successfully signed up to WebGraphix")
             else:
                 messages.error(
                     request, "Unable to register, please check form")
@@ -70,3 +71,17 @@ def user_profile(request):
     """User Profiles"""
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
+
+def contact_us(request):
+    """Contact us form"""
+    if request.method == 'POST':
+        form = contactusform(request.POST)
+
+        if form.is_valid():
+            return redirect(reverse('index'))
+            messages.success(
+                    request, "Form has been submitted")
+    else:
+        form = contactusform()
+    
+    return render(request, 'contactus.html', {'contactusform': contactusform})

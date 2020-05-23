@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% load bootstrap_tags %}
+
+{% block page_title %}{{ user }}'s Profile{% endblock %}
+
+{% block page_heading %}{{ user }}'s Profile{% endblock %}
+
+{% block content %}
+<form action="" method="post" action="{% url 'contactus' %}">
+    {% csrf_token %}
+    {{ contactusform | as_bootstrap }}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}
