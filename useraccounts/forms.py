@@ -50,4 +50,5 @@ class UserRegistrationForm(UserCreationForm):
 class contactusform(forms.ModelForm):
     class Meta:
         model = contactform
-        fields = ['full_name', 'phone_number', 'country', 'requiredby', 'description']
+        fields = ['full_name', 'phone_number', 'email', 'country', 'description']
+

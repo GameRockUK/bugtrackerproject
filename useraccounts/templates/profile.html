@@ -3,11 +3,14 @@
 
 {% block page_title %}{{ user }}'s Profile{% endblock %}
 
-{% block page_heading %}{{ user }}'s Profile{% endblock %}
+<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4">{% block page_heading %}{{ user }}'s Profile{% endblock %}</div>
 
 {% block content %}
 <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
     <h3>Welcome to your Profile</h3>
+    <div id="timeanddate">
+            <p id="datetime"></p>
+    </div>
     <p>Here you can change your password, press the button below to change your password</p>
     <a class="btn btn-primary btn-lg" href="{% url 'password_reset' %}" role="button">Change Password</a>
 </div>

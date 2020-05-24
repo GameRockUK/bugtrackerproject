@@ -23,7 +23,7 @@
                 <a class="nav-item" href="{% url 'products' %}">Store</a>
             </li>
             <li class="nav-link">
-                <a class="nav-item" href="{% url 'logout' %}">Logout</a>
+                <a class="nav-item" href="{% url 'contactus' %}">Contact Us</a>
             </li>
             <li class="nav-link">
                 <a class="nav-item" href="{% url 'view_cart' %}">
@@ -33,12 +33,18 @@
                     {% endif %}
                 </a>
             </li>
+            <li class="nav-link">
+                <a class="nav-item" href="{% url 'logout' %}">Logout</a>
+            </li>
             {% else %}
             <li class="nav-link">
                 <a class="nav-right" id="navbarprimary" href="{% url 'login' %}">Login</a>
             </li>
             <li class="nav-link">
                 <a class="nav-item" id="navbarprimary2" href="{% url 'registration' %}">Register</a>
+            </li>
+            <li class="nav-link">
+                <a class="nav-item" href="{% url 'contactus' %}">Contact Us</a>
             </li>
             {% endif %}
         </ul>
@@ -58,6 +64,11 @@
     
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+            var today = new Date();
+            var datime = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            document.getElementById("datetime").innerHTML = datime;
+    </script>
 </body>
 <footer class="bg-light">
     <p id="cp">Copyright 2020 WebGraphix</p>
