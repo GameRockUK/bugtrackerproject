@@ -20,10 +20,13 @@
         <ul class="nav navbar-nav">
             {% if user.is_authenticated %}
             <li class="nav-link">
+                <a class="nav-item" href="{% url 'profile' %}">Profile</a>
+            </li>
+            <li class="nav-link">
                 <a class="nav-item" href="{% url 'products' %}">Store</a>
             </li>
             <li class="nav-link">
-                <a class="nav-item" href="{% url 'contactus' %}">Contact Us</a>
+                <a class="nav-item" href="{% url 'contactus' %}">Custom order</a>
             </li>
             <li class="nav-link">
                 <a class="nav-item" href="{% url 'view_cart' %}">
@@ -44,7 +47,7 @@
                 <a class="nav-item" id="navbarprimary2" href="{% url 'registration' %}">Register</a>
             </li>
             <li class="nav-link">
-                <a class="nav-item" href="{% url 'contactus' %}">Contact Us</a>
+                <a class="nav-item" href="{% url 'contactus' %}">Custom order</a>
             </li>
             {% endif %}
         </ul>
