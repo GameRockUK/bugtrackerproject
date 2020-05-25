@@ -47,6 +47,7 @@ class UserRegistrationForm(UserCreationForm):
 
         return password2
 
+
 class contactusform(forms.ModelForm):
     class Meta:
         model = contactform

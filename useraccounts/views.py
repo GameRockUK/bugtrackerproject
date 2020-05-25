@@ -82,5 +82,5 @@ def contact_us(request):
                     request, "Form has been submitted")
     else:
         form = contactusform()
-    
+   
     return render(request, 'orderform.html', {'contactusform': contactusform})
