@@ -71,6 +71,7 @@ def user_profile(request):
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
 
+
 def contact_us(request):
     """Contact us form"""
     if request.method == 'POST':

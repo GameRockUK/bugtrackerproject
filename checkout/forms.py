@@ -26,4 +26,3 @@ class OrderForm(forms.ModelForm):
             'country'
         )
 
-
