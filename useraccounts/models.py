@@ -17,3 +17,6 @@ class contactform(models.Model):
     email = models.EmailField(max_length=254, default='test@test.com')
     description = models.CharField(max_length=500, blank=False)
     budget = models.IntegerField(blank=False)
+
+    def __str__(self):
+        return self.full_name
