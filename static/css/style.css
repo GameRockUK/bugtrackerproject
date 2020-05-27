@@ -82,3 +82,10 @@ a:link{
 .product-description {
     min-height: 40px;
 }
+
+/* CARD STYLING FOR CART */
+
+.card {
+    border: 1px;
+    border-color: black;
+}
